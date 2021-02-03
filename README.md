@@ -61,6 +61,43 @@ signature = HMAC_SHA512(
 )
 ```
 
+#### RSA-SHA-256
+
+----
+
+```
+body = payload
+signature = RSASSA_PKCS1_v1_5(
+	SHA256(base64_url_encode(header) + "." + base64_url_encode(body)),
+	signingKey
+)
+```
+
+#### RSA-SHA-384
+
+----
+
+```
+body = payload
+signature = RSASSA_PKCS1_v1_5(
+	SHA384(base64_url_encode(header) + "." + base64_url_encode(body)),
+	signingKey
+)
+```
+
+#### RSA-SHA-512
+
+----
+
+```
+body = payload
+signature = RSASSA_PKCS1_v1_5(
+	SHA512(base64_url_encode(header) + "." + base64_url_encode(body)),
+	signingKey
+)
+```
+
+<!--
 ### Authenticated encryption
 
 ----
@@ -98,4 +135,5 @@ nonce = (12 bytes of random)
 header = nonce
 body = ChaCha20_Poly1305(nonce, key, payload)
 ```
+-->
 
