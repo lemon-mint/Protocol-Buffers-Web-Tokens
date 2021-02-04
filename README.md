@@ -3,7 +3,7 @@ Protocol Buffers based web token (JSON Web Token Alternative)
 
 - Smaller token size
 - Faster decoding
-- Standardized encryption standard
+- Reduced overhead
 
 ## Creation process
 
