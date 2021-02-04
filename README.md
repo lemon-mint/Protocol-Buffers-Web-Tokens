@@ -61,6 +61,48 @@ signature = HMAC_SHA512(
 )
 ```
 
+#### BLAKE2B-256
+
+----
+
+```
+body = payload
+signature = blake2b_256(
+	base64_url_encode(header) +
+	"." +
+	base64_url_encode(body),
+	signingKey
+)
+```
+
+#### BLAKE2B-384
+
+----
+
+```
+body = payload
+signature = blake2b_384(
+	base64_url_encode(header) +
+	"." +
+	base64_url_encode(body),
+	signingKey
+)
+```
+
+#### BLAKE2B-512
+
+----
+
+```
+body = payload
+signature = blake2b_512(
+	base64_url_encode(header) +
+	"." +
+	base64_url_encode(body),
+	signingKey
+)
+```
+
 #### RSA-SHA-256
 
 ----
